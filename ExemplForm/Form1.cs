@@ -12,19 +12,16 @@ namespace ExemplForm
         {
             InitializeComponent();
             
-            but2.Click += ButClic2;
-            but8.Click += ButClic3;
+            
             foreach(var iten in this.Controls)
             {
                 Console.WriteLine(iten);
                 Button b = iten as Button;
                 {
                     if (b != null)
-                        b.Click += (a, c) =>
-                        {
-                            Button d = (Button)a;
-                            MessageBox.Show(d.Text);
-                        };
+                        b.Click += (a, c) => MessageBox.Show(b.Text);
+                                               
+                        
                 }
                     
             }
