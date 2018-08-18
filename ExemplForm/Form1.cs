@@ -36,16 +36,7 @@ namespace ExemplForm
 
         private void GroupBox_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show(String.Format(sender.GetType().ToString()));
-            Button b = null;
-            if(sender is Button)
-                b = (Button)sender;
-
             
-            if (b != null)
-            {
-                MessageBox.Show($"Была нажата{b.Name}");
-            }
             
         }
 
