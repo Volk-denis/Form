@@ -14,11 +14,12 @@ namespace ExemplForm
         [STAThread]
         static void Main()
         {
-            
-
+          
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form1 f = new Form1();
+            Presenter presenter = new Presenter(f);
+            Application.Run(f);
             
         }
     }

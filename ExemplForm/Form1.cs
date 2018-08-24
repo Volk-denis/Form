@@ -2,82 +2,47 @@
 using System.IO;
 using System.Windows.Forms;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ExemplForm
 {
     public partial class Form1 : Form
     {
-        
+        Task task = null;
+
         public Form1()
         {
             InitializeComponent();
-            
-            
-            foreach(var iten in this.Controls)
-            {
-                Console.WriteLine(iten);
-                Button b = iten as Button;
-                {
-                    if (b != null)
-                        b.Click += (a, c) => MessageBox.Show(b.Text);
-                                               
-                        
-                }
-                    
-            }
-
-            
-
-            
-
-
-
-        }
-
-        private void GroupBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-            
-        }
-
-        private void ButClic3(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                               
-
-                
-                
-            }
-            catch (Exception d)
-            {
-                Console.WriteLine(d.Message);
-            }
-        }
-
-        private void ButClic2(object sender, EventArgs e)
-        {
-            
 
            
-            
 
+            button1.Click += Button1_Click;
+            button2.Click += Button2_Click;
         }
 
-        private void tex_TextChanged(object sender, EventArgs e)
+        
+
+        private void Button2_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void groupBox_Enter(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-
+            start();
+           
+              
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void chengeTime(string time)
         {
-
+            Action a = () => clock.Text = time;
+            Invoke(a);
         }
+
+        public event Action start;
+
+        
     }
 }
