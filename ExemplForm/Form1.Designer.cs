@@ -34,6 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.clock = new System.Windows.Forms.Label();
+            this.Worker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // timer1
@@ -42,49 +43,52 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.progressBar1.Location = new System.Drawing.Point(209, 86);
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(12, 85);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(508, 34);
+            this.progressBar1.Size = new System.Drawing.Size(496, 34);
             this.progressBar1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(381, 139);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(514, 84);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 35);
+            this.button1.Size = new System.Drawing.Size(81, 35);
             this.button1.TabIndex = 1;
             this.button1.Text = "start";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(381, 193);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(601, 84);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 35);
+            this.button2.Size = new System.Drawing.Size(78, 35);
             this.button2.TabIndex = 2;
             this.button2.Text = "stop";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // clock
             // 
-            this.clock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.clock.AutoSize = true;
-            this.clock.Location = new System.Drawing.Point(453, 44);
+            this.clock.Location = new System.Drawing.Point(8, 9);
             this.clock.Name = "clock";
             this.clock.Size = new System.Drawing.Size(51, 20);
             this.clock.TabIndex = 3;
             this.clock.Text = "label1";
             // 
+            // Worker
+            // 
+            this.Worker.WorkerReportsProgress = true;
+            this.Worker.WorkerSupportsCancellation = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 944);
+            this.ClientSize = new System.Drawing.Size(691, 944);
             this.Controls.Add(this.clock);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -102,6 +106,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label clock;
+        private System.ComponentModel.BackgroundWorker Worker;
     }
 }
 
